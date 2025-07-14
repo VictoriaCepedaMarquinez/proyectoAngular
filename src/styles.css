@@ -1,0 +1,97 @@
+ body {
+  padding-top: 55px;
+}
+.container-clothes{
+  margin: 2%;
+}
+ .footer-rosa-pastel {
+    background-color: #FADADD; /* rosa pastel clarito */
+    color: #5C2140; /* un morado oscuro para buen contraste */
+  }
+
+  .footer-rosa-pastel h5 {
+    font-weight: 700;
+    color: #A96C8B; /* un rosa algo más intenso para títulos */
+  }
+
+  .footer-rosa-pastel .arrow {
+    color: #A96C8B;
+    font-weight: 700;
+  }
+
+  .footer-rosa-pastel p {
+    margin-bottom: 0.5rem;
+  }
+
+  .link-rosa {
+    color: #7B4B67; /* rosa medio */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .link-rosa:hover,
+  .link-rosa:focus {
+    color: #C77BA0; /* rosa más vivo al pasar el mouse */
+    text-decoration: underline;
+  }
+.navbar .nav-link {
+  color: #A96C8B;  /* mismo color que "SHOP" */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+  color: #C77BA0;  /* rosa más vivo al pasar mouse o activo */
+}
+
+/* Cambiar color del icono hamburguesa */
+.navbar-toggler {
+  border-color: #A96C8B; /* borde rosa pastel */
+}
+
+/* Input de búsqueda con borde y texto rosa pastel */
+.navbar .form-control {
+  border-color: #A96C8B;
+  color: #5C2140; /* texto morado oscuro legible */
+  background-color: #FDF0F7; /* fondo muy claro rosado */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .form-control::placeholder {
+  color: #A96C8B; /* placeholder en rosa pastel */
+}
+
+/* Al hacer foco, borde y sombra en rosa */
+.navbar .form-control:focus {
+  border-color: #C77BA0;
+  box-shadow: 0 0 5px #C77BA0;
+  background-color: #fff;
+  color: #5C2140;
+}
+
+/* Botón búsqueda rosa pastel, fondo transparente */
+.navbar .btn-outline-success {
+  color: #A96C8B;
+  border-color: #A96C8B;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+}
+
+.navbar .btn-outline-success:hover,
+.navbar .btn-outline-success:focus {
+  background-color: #C77BA0;
+  color: #fff;
+  border-color: #C77BA0;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

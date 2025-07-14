@@ -1,0 +1,60 @@
+<h2></h2>
+<table class="table">
+    <thead>
+        <tr>
+        <th></th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img 
+          [src]="jacket.imagen" 
+          [alt]="jacket.name" 
+          width="250" 
+          (mouseenter)="cambiarImagen(jacket)" 
+          (mouseleave)="restaurarImagen(jacket)"
+        />
+       
+      </td>
+      <td class="nombrePrenda">{{ jacket.name }} </td>
+      <td>{{ jacket.description}}</td>
+      <td>{{ jacket.price }}</td>
+      <td>{{ jacket.stock }}</td>
+    </tr>
+    <tr>
+      <td>
+        <img 
+          [src]="vest.imagen" 
+          [alt]="vest.name" 
+          width="250" 
+          (mouseenter)="cambiarImagen(vest)" 
+          (mouseleave)="restaurarImagen(vest)"
+        />
+      </td>
+      <td class="nombrePrenda">{{ vest.name }}</td>
+      <td>{{ vest.description }}</td>
+      <td>{{ vest.price }}</td>
+      <td>{{ vest.stock }}</td>
+    </tr>
+    <tr>
+      <td>
+        <img 
+          [src]="tShirt.imagen" 
+          [alt]="tShirt.name" 
+          width="250" 
+          (mouseenter)="cambiarImagen(tShirt)" 
+          (mouseleave)="restaurarImagen(tShirt)"
+        />
+      </td>
+      <td class="nombrePrenda">{{ tShirt.name }}</td>
+      <td>{{ tShirt.description }}</td>
+      <td>{{ tShirt.price }}</td>
+      <td>{{ tShirt.stock }}</td>
+    </tr>
+  </tbody>
+</table>

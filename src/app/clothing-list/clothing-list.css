@@ -1,0 +1,25 @@
+
+.nombrePrenda{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #A96C8B; 
+}
+
+th{
+    background-color: #A96C8B;
+    color: white;   
+}
+
+td{
+    color: #634755;
+    
+}
+
+img{
+    border-radius: 4%;
+}
+
+
+
+
