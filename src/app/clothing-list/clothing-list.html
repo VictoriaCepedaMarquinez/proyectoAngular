@@ -10,7 +10,8 @@
         </tr>
     </thead>
   <tbody>
-    <tr *ngFor="let clothes of clothes" [ngClass]="{'clearance':clothes.clearance}">
+  @for (clothes of clothes; track clothes.name){
+    <tr [ngClass]="{'clearance':clothes.clearance}" >
       <td>
         <img 
           [src]="clothes.imagen" 
@@ -24,8 +25,17 @@
       <td class="nombrePrenda">{{ clothes.name }} </td>
       <td>{{ clothes.description}}</td>
       <td> {{clothes.price  | currency}}</td>
-      <td ><span class="badge rounded-pill text-bg-warning" *ngIf= "clothes.stock == 0">SIN STOCK</span><span *ngIf= "clothes.stock > 0">{{clothes.stock}}</span></td>
-    
+
+      @if(clothes.stock > 0){
+        <td>{{clothes.stock}}</td>
+      }@else {
+        <td ><span class="badge rounded-pill text-bg-warning" *ngIf= "clothes.stock == 0">SIN STOCK</span></td>
+      }
     </tr>
+  }@empty {
+    <tr>
+      <td colspan = "4">No hay indumentaria para mostrar</td>   
+    </tr>
+  }
   </tbody>
 </table>
