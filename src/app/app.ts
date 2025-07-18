@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ClothingListComponent } from './clothing-list/clothing-list';
+import { ToiaClothes } from './toia-clothes/toia-clothes';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ClothingListComponent],
+  imports: [
+    RouterOutlet,
+    RouterModule, // necesario para usar routerLink en el HTML
+    ToiaClothes
+  ],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

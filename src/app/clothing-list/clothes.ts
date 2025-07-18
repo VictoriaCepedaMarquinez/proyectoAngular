@@ -7,4 +7,5 @@ export interface clothes{
     imagenHover: string;
     imagen:string;
     clearance: boolean;
+    quantity : number;
 }

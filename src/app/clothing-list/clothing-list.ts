@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import {clothes} from './clothes';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-clothing-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule ,FormsModule],
   templateUrl: './clothing-list.html',
   styleUrls: ['./clothing-list.css'] 
 })
@@ -22,6 +23,7 @@ export class ClothingListComponent {
     imagenHover: 'assets/img/camperaHover.webp',
     imagen: 'assets/img/campera.webp',
     clearance: false,
+    quantity:0,
   },
 
  {
@@ -33,6 +35,7 @@ export class ClothingListComponent {
     imagenHover: 'assets/img/chalecoHover.webp',
     imagen: 'assets/img/chaleco.webp',
     clearance: true,
+    quantity: 0,
   },
   {
     name: 'Polera Endless',
@@ -43,8 +46,23 @@ export class ClothingListComponent {
     imagenHover: 'assets/img/poleraHover.webp',
     imagen: 'assets/img/polera.webp',
     clearance: false,
+    quantity: 0,
   }
   ];
+
+  upQuantity(clothes : clothes):void{
+    if(clothes.quantity < clothes.stock){
+      clothes.quantity++;
+    }
+    
+  }
+
+  downQuantity(clothes : clothes):void{
+    if(clothes.quantity > 0){
+      clothes.quantity--;
+    }
+    
+  }
 
   cambiarImagen(prenda: any) {
     prenda.imagen = prenda.imagenHover;
@@ -52,6 +70,10 @@ export class ClothingListComponent {
 
   restaurarImagen(prenda: any) {
     prenda.imagen = prenda.imagenNormal;
+  }
+
+  onChangeQuantity(event:Event,clothes:clothes):void{
+    console.log(event.target);
   }
 
   
