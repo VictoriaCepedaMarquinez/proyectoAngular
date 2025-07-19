@@ -13,6 +13,7 @@ th{
 
 td{
     color: #634755;
+    width: 400px;
     
 }
 
@@ -24,34 +25,6 @@ img{
     color: rgb(2, 66, 2);
 }
 
-.quantity-control {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem; /* Espacio entre elementos */
-}
-
-.input-quantity {
-  width: 60px;
-  text-align: center;
-}
-
-.btn-decrease,
-.btn-increase {
-  padding: 0.25rem 0.5rem;
-  border: 1px solid  #634755;
-  background-color: white;
-  color: black;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.btn-decrease:hover,
-.btn-increase:hover {
-  background-color: #A96C8B;
-  color: white;
-}
 
 
 

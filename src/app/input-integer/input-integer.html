@@ -1,0 +1,12 @@
+<div class="quantity-control">
+    <button class="btn-decrease" (click)="downQuantity()">-</button>
+
+    <input
+      type="number"
+      [(ngModel)]="quantity"
+      (keyup)="onChangeQuantity($event)"
+      class="input-quantity"
+    />
+
+    <button class="btn-increase" (click)="upQuantity()">+</button>
+  </div>

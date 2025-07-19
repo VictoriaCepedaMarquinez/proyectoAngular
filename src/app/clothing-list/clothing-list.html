@@ -1,56 +1,43 @@
 <h2></h2>
 <table class="table">
-    <thead>
-        <tr>
-        <th></th>
-        <th>Nombre</th>
-        <th>Descripcion</th>
-        <th>Precio</th>
-        <th>Stock</th>
-        <th>Compra</th>
-        </tr>
-    </thead>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th>Stock</th>
+      <th>Compra</th>
+    </tr>
+  </thead>
   <tbody>
-  @for (clothes of clothes; track clothes.name){
-    <tr [ngClass]="{'clearance':clothes.clearance}" >
+    @for (clothes of clothes; track clothes.name){
+    <tr [ngClass]="{'clearance':clothes.clearance}">
       <td>
-        <img class="img-thunbnail"
-          [src]="clothes.imagen" 
-          [alt]="clothes.name" 
-          width="250" 
-          (mouseenter)="cambiarImagen(clothes)" 
-          (mouseleave)="restaurarImagen(clothes)"
-        />
-    
+        <img class="img-thunbnail" [src]="clothes.imagen" [alt]="clothes.name" width="250"
+          (mouseenter)="cambiarImagen(clothes)" (mouseleave)="restaurarImagen(clothes)" />
+
       </td>
       <td class="nombrePrenda">{{ clothes.name }} </td>
       <td>{{ clothes.description}}</td>
-      <td> {{clothes.price  | currency}}</td>
+      <td> {{clothes.price | currency}}</td>
 
       @if(clothes.stock > 0){
-        <td>{{clothes.stock}}</td>
+      <td>{{clothes.stock}}</td>
       }@else {
-        <td ><span class="badge rounded-pill text-bg-warning" *ngIf= "clothes.stock == 0">SIN STOCK</span></td>
+      <td><span class="badge rounded-pill text-bg-warning" *ngIf="clothes.stock == 0">SIN STOCK</span></td>
       }
-   <td class="text-center">
-  <div class="quantity-control">
-    <button class="btn-decrease" (click)="downQuantity(clothes)">-</button>
-
-    <input
-      type="number"
-      [(ngModel)]="clothes.quantity"
-      (keyup)="onChangeQuantity($event, clothes)"
-      class="input-quantity"
-    />
-
-    <button class="btn-increase" (click)="upQuantity(clothes)">+</button>
-  </div>
-</td>
+      <td class="text-center">
+        @if (clothes.stock) {
+         <app-input-integer [(quantity)]="clothes.quantity" [max]="clothes.stock"></app-input-integer>
+         cant {{clothes.quantity}}
+        }
+      </td>
     </tr>
-  }@empty {
+    }@empty {
     <tr>
-      <td colspan = "4">No hay indumentaria para mostrar</td>   
+      <td colspan="4">No hay indumentaria para mostrar</td>
     </tr>
-  }
+    }
   </tbody>
 </table>
