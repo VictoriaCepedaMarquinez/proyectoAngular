@@ -30,7 +30,8 @@
       <td class="text-center">
         @if (clothes.stock) {
          <app-input-integer [(quantity)]="clothes.quantity" [max]="clothes.stock"></app-input-integer>
-         cant {{clothes.quantity}}
+         <button class="btn btn-primary" (click)="addToCart(clothes)">Comprar</button>
+        
         }
       </td>
     </tr>

@@ -3,6 +3,7 @@ import { clothes } from './clothes';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { InputIntegerComponent } from '../input-integer/input-integer';
+import { ClothesCart } from '../clothes-cart';
 
 
 @Component({
@@ -13,7 +14,8 @@ import { InputIntegerComponent } from '../input-integer/input-integer';
   styleUrls: ['./clothing-list.css']
 })
 export class ClothingListComponent {
-  clothes: clothes[] = [
+
+   clothes: clothes[] = [
     {
       name: 'Campera Shift',
       description: 'Campera de nylon rellena con guata matelaseada, forrada en polar al tono. Capucha incorporada forrada en polar con elastico y tanca para ajustar. Cierre frontal. Posee multiples bolsillos tanto externos como internos.Todos los avíos son marcarios al tono. Elastico circular en bajo con tanca para ajustar.',
@@ -47,6 +49,7 @@ export class ClothingListComponent {
       clearance: false,
       quantity: 0,
     }
+    
   ];
 
   cambiarImagen(prenda: any) {
@@ -57,5 +60,12 @@ export class ClothingListComponent {
     prenda.imagen = prenda.imagenNormal;
   }
 
+  constructor(private cart: ClothesCart) {}
+
+  addToCart(clothes :clothes):void{
+    this.cart.addToCart(clothes);
+    clothes.stock -= clothes.quantity;
+    clothes.quantity = 0;
+  }
 
 }
