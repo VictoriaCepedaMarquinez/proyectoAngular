@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { InputIntegerComponent } from '../input-integer/input-integer';
 import { ClothesCart } from '../clothes-cart';
+import { ClothesData } from '../clothes-data';
 
 
 @Component({
@@ -60,7 +61,7 @@ export class ClothingListComponent {
     prenda.imagen = prenda.imagenNormal;
   }
 
-  constructor(private cart: ClothesCart) {}
+  constructor(private cart: ClothesCart, private clothesService: ClothesData) {}
 
   addToCart(clothes :clothes):void{
     this.cart.addToCart(clothes);

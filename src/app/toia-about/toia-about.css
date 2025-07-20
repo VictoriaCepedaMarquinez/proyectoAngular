@@ -1,0 +1,24 @@
+.about-us {
+  background-color: #fdf7fa;
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: 'DM Sans', sans-serif;
+  color: #634755;
+}
+
+.about-us h2 {
+  font-size: 2rem;
+  color: #a96c8b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-us p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  text-align: center;
+}

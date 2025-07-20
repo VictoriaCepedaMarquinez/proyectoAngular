@@ -1,32 +1,100 @@
 
-.nombrePrenda{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    color: #A96C8B; 
+
+.tabla-ropa {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
-th{
-    background-color: #A96C8B;
-    color: white;   
+th {
+  background-color: #a96c8b;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-size: 1rem;
 }
 
-td{
-    color: #634755;
-    width: 400px;
-    
+td {
+  color: #634755;
+  padding: 16px;
+  vertical-align: top;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
 }
 
-img{
-    border-radius: 4%;
-}
-.clearance td{
-    background-color: lightgreen;
-    color: rgb(2, 66, 2);
+.nombre-prenda {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #a96c8b;
 }
 
+.descripcion-prenda {
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.imagen-prenda {
+  border-radius: 12px;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.imagen-prenda:hover {
+  transform: scale(1.05);
+}
+
+.clearance td {
+  color: rgb(3, 92, 3);
+  font-weight: 600;
+}
 
 
+.sin-stock {
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
 
+.btn-comprar {
+  margin-top: 8px;
+  background-color: #a96c8b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.btn-comprar:hover {
+  background-color: #874d6a;
+}
 
+.acciones-compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.sin-resultados {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-style: italic;
+}
+.badge-oferta {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 600;
+}

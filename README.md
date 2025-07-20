@@ -1,59 +1,23 @@
-# Toia
+# Toia- clothes
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+T# Proyecto Angular - Página de Ropa
 
-## Development server
+## Temática del Proyecto
 
-To start a local development server, run:
+El proyecto consiste en una página web de ropa desarrollada con Angular, que permite visualizar productos y gestionar un carrito de compras básico. La aplicación utiliza servicios HTTP para obtener y manipular datos de forma dinámica, ofreciendo una experiencia de usuario eficiente y funcional.
 
-```bash
-ng serve
-```
+## Datos del Estudiante
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Nombre y Apellido:** Victoria Cepeda  
+- **DNI:** 45.890.493  
+- **Email:** victoriacepeda.m@gmail.com  
+- **Sede:** Tandil  
 
-## Code scaffolding
+## Enlaces 
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Repositorio GitHub:** https://github.com/VictoriaCepedaMarquinez/proyectoAngular.git
+- **Proyecto Editable en StackBlitz:** https://stackblitz.com/github/VictoriaCepedaMarquinez/proyectoAngular
 
-```bash
-ng generate component component-name
-```
+Este proyecto tiene como objetivo aplicar y demostrar conocimientos en el desarrollo de aplicaciones web con Angular, especialmente en el manejo de componentes, servicios y comunicación HTTP. Se buscó construir una aplicación funcional, modular y escalable, que permita una experiencia de usuario intuitiva y eficiente.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
